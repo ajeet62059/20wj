@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Multiple Tabs and Search Example</title>
+  </head>
+  <body>
+    <button onclick="openTabs()">Open Multiple Tabs and Search</button>
+
+    <script>
+      function openTabs() {
+        // URLs to open in new tabs
+        const urls = [
+          "https://www.bing.com/search?q=How+are+national+parks+and+reserves+managed+for+conservation",
+          "https://www.bing.com/search?q=What+is+the+role+of+rivers+and+lakes+in+supporting+wildlife",
+          "https://www.bing.com/search?q=Why+do+some+animals+have+unique+adaptations+for+survival",
+          "https://www.bing.com/search?q=How+do+forests+help+in+carbon+sequestration",
+          "https://www.bing.com/search?q=What+is+the+impact+of+air+pollution+on+nature+and+ecosystems",
+          "https://www.bing.com/search?q=Why+are+wetlands+referred+to+as+the+'kidneys+of+the+Earth'",
+          "https://www.bing.com/search?q=How+do+animals+communicate+in+the+wild",
+          "https://www.bing.com/search?q=What+is+the+significance+of+migratory+birds+in+nature",
+          "https://www.bing.com/search?q=How+do+bees+create+honey+and+pollinate+plants",
+          "https://www.bing.com/search?q=Why+is+the+Great+Barrier+Reef+a+natural+wonder+and+under+threat",
+          "https://www.bing.com/search?q=What+is+the+concept+of+permaculture+and+sustainable+farming",
+          "https://www.bing.com/search?q=How+do+rainforests+influence+global+weather+patterns",
+          "https://www.bing.com/search?q=Why+is+conservation+of+soil+and+land+important+for+nature",
+          "https://www.bing.com/search?q=What+is+the+relationship+between+wildfires+and+ecosystems",
+          "https://www.bing.com/search?q=How+do+glaciers+shape+the+landscape",
+          "https://www.bing.com/search?q=Why+is+the+study+of+marine+biology+crucial+for+understanding+the+oceans",
+          "https://www.bing.com/search?q=What+is+the+impact+of+urbanization+on+natural+habitats",
+          "https://www.bing.com/search?q=How+do+plants+and+trees+contribute+to+air+quality",
+          "https://www.bing.com/search?q=Why+are+rainforests+referred+to+as+the+'lungs+of+the+Earth'",
+          "https://www.bing.com/search?q=How+can+individuals+contribute+to+nature+conservation",
+        ];
+
+        // Function to open tabs with a delay
+        function openTabWithDelay(index) {
+          if (index < urls.length) {
+            window.open(urls[index], "_blank");
+            setTimeout(function () {
+              openTabWithDelay(index + 1);
+            }, 2000); // Open the next tab after a 1-second delay
+          }
+        }
+
+        openTabWithDelay(0); // Start opening tabs from the first URL
+      }
+    </script>
+  </body>
+</html>
